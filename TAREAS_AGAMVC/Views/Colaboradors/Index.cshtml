@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TAREAS_AGAMVC.Models.Colaborador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<cache>Listado de Colaboradores</cache>
+
+<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.APaternoCol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AMaternoCol)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APaternoCol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AMaternoCol)
+            </td>
+            <td>
+                    <a asp-action="Create">Crear</a>  |
+                <a asp-action="Edit" asp-route-id="@item.IdCol">Editar</a> |
+                    <!--
+                <a asp-action="Delete" asp-route-id="@item.IdCol">Delete</a>
+                    -->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

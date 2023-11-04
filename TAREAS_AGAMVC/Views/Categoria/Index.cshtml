@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TAREAS_AGAMVC.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Categorias</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCat)
+            </td>
+            <td>
+                | <a asp-action="Create">Crear</a> |
+                <a asp-action="Edit" asp-route-id="@item.IdCat">Editar</a> |
+                <!--
+                <a asp-action="Delete" asp-route-id="@item.IdCat">Eliminar</a>
+                    -->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

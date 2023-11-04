@@ -1,0 +1,71 @@
+﻿<html>
+    <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    @model IEnumerable<TAREAS_AGAMVC.Models.Tarea>
+
+    @{
+        ViewData["Title"] = "IndexN";
+    }
+
+    <H3>
+        <p>
+            <a asp-action="Create">Crear Nueva Tarea</a>
+        </p>
+    </H3>
+
+    <h2>Pendiente</h2>
+
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreTar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DescripcionTar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EstatusTar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdCatNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdColNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreTar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DescripcionTar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstatusTar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdColNavigation.NombreCol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdCatNavigation.NombreCat)
+
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdTar">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    </head>
+</html>
+

@@ -1,0 +1,50 @@
+﻿@model TAREAS_AGAMVC.Models.Tarea
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Crear Tarea</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreTar" class="control-label">Nombre Tarea</label>
+                <input asp-for="NombreTar" class="form-control" />
+                <span asp-validation-for="NombreTar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionTar" class="control-label">Descripción</label>
+                <input asp-for="DescripcionTar" class="form-control" />
+                <span asp-validation-for="DescripcionTar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstatusTar" class="control-label">Estatus</label>
+                <select asp-for="EstatusTar" class="form-control" >
+                    <option value="Nueva">Nueva</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCol" class="control-label"></label>
+                <select asp-for="IdCol" class ="form-control" asp-items="ViewBag.IdCol"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCat" class="control-label"></label>
+                <select asp-for="IdCat" class ="form-control" asp-items="ViewBag.IdCat"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear Tarea" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
