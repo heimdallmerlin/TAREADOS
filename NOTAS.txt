@@ -1,0 +1,58 @@
+Conexión SQL
+-- La cadena de conexión esta en el archivo appsettings.json
+
+--La carpeta de BDD Script contiene el archivo TAREAS.sql para crear las bdd, las tablas e insertar los registros para ejecutar las pruebas necesarias.
+
+--La carpeta Publicar se pueden encontrar lo necesario para montar en el servidor IIS.
+
+
+****************** Versiones utilizadas*******************
+-- Microsoft SQL Server 2019
+
+Microsoft SQL Server 2019 (RTM-GDR) (KB5029377) - 15.0.2104.1 (X64)   Aug 16 2023 00:09:21   Copyright (C) 2019 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: ) 
+
+-- Microsoft Visual Studio Community 2022
+Versión 17.7.6
+VisualStudio.17.Release/17.7.6+34221.43
+Microsoft .NET Framework
+Versión 4.8.09037
+
+Versión instalada: Community
+
+Administrador de paquetes NuGet   6.7.0
+Administrador de paquetes NuGet de Visual Studio. Para obtener más información acerca de NuGet, visite https://docs.nuget.org/
+
+ASP.NET and Web Tools   17.7.274.37181
+ASP.NET and Web Tools
+
+Azure Functions and Web Jobs Tools   17.7.274.37181
+Azure Functions and Web Jobs Tools
+
+Common Azure Tools   1.10
+Provides common services for use by Azure Mobile Services and Microsoft Azure Tools.
+
+Herramientas de Azure App Service v3.0.0   17.7.274.37181
+Herramientas de Azure App Service v3.0.0
+
+Herramientas de C#   4.7.0-3.23517.17+9d4cc0304792762c34f41cbbec67a1fcd2dc764f
+Los componentes de C# utilizados en el IDE. En función del tipo de proyecto y la configuración, se podría utilizar una versión diferente del compilador.
+
+Herramientas de TypeScript   17.0.20829.2001
+Herramientas de TypeScript para Microsoft Visual Studio
+
+Herramientas de Visual Basic   4.7.0-3.23517.17+9d4cc0304792762c34f41cbbec67a1fcd2dc764f
+Los componentes de Visual Basic utilizados en el IDE. En función del tipo de proyecto y la configuración, se podría utilizar una versión diferente del compilador.
+
+Herramientas de Visual F#   17.7.0-beta.23314.10+e612cf93b989503c89e3a5830090062b7ab5e143
+Herramientas de Microsoft Visual F#
+
+Microsoft JVM Debugger   1.0
+Provides support for connecting the Visual Studio debugger to JDWP compatible Java Virtual Machines
+
+Razor (ASP.NET Core)   17.7.3.2333001+0ab18affdf2a37647768d0e25f5f021bee6257a1
+Proporciona servicios de lenguajes para ASP.NET Core Razor.
+
+Visual Studio IntelliCode   2.2
+Desarrollo asistido por AI para Visual Studio.
+
+
